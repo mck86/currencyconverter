@@ -35,7 +35,7 @@ grunt serve
 
 ## <a name="note"></a> Note
 
-There may be errors in IE when running locally, which are due to an HTTP 403 from the api and I am unable to determine why, but they disappear when running on a server, and works fine in Chrome and Firefox.
+The API returns an HTTP 403 status when run in IE locally, but works when uploaded to a server or run in Chrome and Firefox. When researched, it appears to be due to the request being a Cross-Origin Request. Because of the way IE handles these, it returns a 403 status. Chrome and Firefox handles this differently which is why they do not return a 403 status.
 
 ## <a name="to-dos"></a> To-Dos
 
