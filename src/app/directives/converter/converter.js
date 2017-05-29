@@ -1,6 +1,6 @@
 angular.module('currencyConverter')
 
-.directive('converterDirective', function($q, $filter, fixer, toast) {
+.directive('converterDirective', function($q, $filter, fixer) {
 	return {
 		restrict: 'E',
 		templateUrl: 'app/directives/converter/converter.html',
@@ -13,17 +13,18 @@ angular.module('currencyConverter')
 				baseCurrency: "CAD",
 				convertedAmount: null,
 				convertedCurrency: "USD",
-				loaded: true,
+				loaded: false,
+				disclaimer: false,
 				currencies: {},
 				calculateBase: function() {
-					if(Number.isNaN(Number(this.convertedAmount))) {
+					if(isNaN(Number(this.convertedAmount))) {
 						this.baseAmount = "";
 					} else {
 						this.baseAmount = (this.convertedCurrency === this.baseCurrency) ? this.convertedAmount : Number(parseFloat(parseFloat(this.currencies[this.convertedCurrency][this.baseCurrency]) * parseFloat(this.convertedAmount || 1)).toFixed(2));
 					}
 				},
 				calculateConverted: function() {
-					if(Number.isNaN(Number(this.baseAmount))) {
+					if(isNaN(Number(this.baseAmount))) {
 						this.convertedAmount = "";
 					} else {
 						this.convertedAmount = (this.convertedCurrency === this.baseCurrency) ? this.baseAmount : Number(parseFloat(parseFloat(this.currencies[this.baseCurrency][this.convertedCurrency]) * parseFloat(this.baseAmount || 1)).toFixed(2));
@@ -43,7 +44,7 @@ angular.module('currencyConverter')
 					scope.converterDirective.loaded = true;
 				},
 				function onError(resp) {
-					toast.error("Could not retrieve data!");
+					console.log(resp);
 				}
 			);
 		}

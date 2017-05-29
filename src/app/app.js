@@ -12,14 +12,13 @@ angular.module('currencyConverter', [
 	templateUrl: 'app/app.html',
 	controller: AppController
 });
-
 function AppConfig($routeProvider, $locationProvider, $httpProvider) {
 	$routeProvider
 		.when('/', {
 			redirectTo: '/home'
 		})
 		.when('/home', {
-			template: '<home page-title="$ctrl.pageTitle"></home>'
+			template: '<home></home>'
 		})
 		.when('/404', {
 			templateUrl: 'app/components/404/404.html'
@@ -28,8 +27,8 @@ function AppConfig($routeProvider, $locationProvider, $httpProvider) {
 			redirectTo: '/404'
 		});
 
-    $httpProvider.defaults.withCredentials = true;
-    $httpProvider.defaults.cache = false;
+    // $httpProvider.defaults.withCredentials = true;
+    // $httpProvider.defaults.cache = false;
 
 	$locationProvider.hashPrefix('');
 }

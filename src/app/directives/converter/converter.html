@@ -7,7 +7,7 @@
 		</div>
 
 		<div class="slds-grid slds-wrap">
-			<div class="slds-p-horizontal_small slds-size_8-of-12 slds-p-horizontal_xx-small slds-p-top_xx-small">
+			<div class="slds-p-horizontal_small slds-size_3-of-3 slds-p-horizontal_xx-small slds-p-top_xx-small">
 				Type in amount and select currency:
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 		</div>
 
 		<div class="slds-grid slds-wrap">
-			<div class="slds-p-horizontal_small slds-size_8-of-12 slds-p-horizontal_xx-small slds-p-top_xx-small">
+			<div class="slds-p-horizontal_small slds-size_3-of-3 slds-p-horizontal_xx-small slds-p-top_xx-small">
 				Converted Amount:
 			</div>
 		</div>
@@ -50,6 +50,28 @@
 		                <option ng-repeat="currency in converterDirective.currencyList" ng-value="currency">{{currency}}</option>
 		            </select>
 		        </div>
+			</div>
+		</div>
+
+		<div ng-if="!converterDirective.disclaimer" class="slds-grid slds-wrap">
+			<div class="slds-p-horizontal_small slds-size_3-of-3 slds-p-horizontal_xx-small slds-p-top_xx-small slds-text-align_right">
+				<a href="" ng-click="converterDirective.disclaimer = true">Disclaimer</a>
+			</div>
+		</div>
+		<div ng-if="converterDirective.disclaimer" class="slds-grid slds-wrap slds-is-relative">
+			<div class="slds-p-horizontal_small slds-size_3-of-3 slds-p-horizontal_xx-small slds-p-top_xx-small slds-text-align_left">
+				<div class="slds-box slds-is-relative">
+					<div class="slds-is-absolute slds-float_right" style="right: 5px; top: 4px">
+						<span ng-click="converterDirective.disclaimer = false" class="slds-icon_container slds-icon-utility-close cursor-pointer" title="Close">
+							<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="vendors/salesforce-lightning-design-system/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+							</svg>
+							<span class="slds-assistive-text">Description of icon</span>
+						</span>
+					</div>
+					<p>Fixer.io is a free JSON API for current and historical foreign exchange rates published by the European Central Bank.</p>
+					<p>The rates are updated daily around 4PM CET.</p>
+				</div>
 			</div>
 		</div>
 	</form>
