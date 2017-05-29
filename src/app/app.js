@@ -12,7 +12,6 @@ angular.module('currencyConverter', [
 	templateUrl: 'app/app.html',
 	controller: AppController
 });
-
 function AppConfig($routeProvider, $locationProvider, $httpProvider) {
 	$routeProvider
 		.when('/', {
