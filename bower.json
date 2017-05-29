@@ -1,0 +1,10 @@
+{
+  "name": "currency-converter",
+  "version": "0.1.1",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "salesforce-lightning-design-system": "^2.3.1",
+    "angular-route": "^1.6.4",
+    "toastr": "^2.1.3"
+  }
+}
