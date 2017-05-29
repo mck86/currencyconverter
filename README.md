@@ -3,6 +3,7 @@ Test for The Home Depot application process
 
 Table of Contents:
 * [Install](#install)
+    * [Clone Project](#clone-project)
     * [Install Grobal Dependencies](#install-global-dependencies)
     * [Install Project Dependencies](#install-project-dependencies)
 * [Run](#run)
@@ -11,6 +12,10 @@ Table of Contents:
 
 ## <a name="install"></a> Install
 
+### <a name="clone-project"></a> Clone Project from Git
+```sh
+npm git clone https://github.com/mck86/currencyconverter.git
+```
 ### <a name="install-global-dependencies"></a> Install global dependencies
 ```sh
 npm install -g bower
