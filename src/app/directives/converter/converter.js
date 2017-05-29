@@ -1,6 +1,6 @@
 angular.module('currencyConverter')
 
-.directive('converterDirective', function($q, $filter, fixer, toast) {
+.directive('converterDirective', function($q, $filter, fixer) {
 	return {
 		restrict: 'E',
 		templateUrl: 'app/directives/converter/converter.html',
@@ -44,7 +44,7 @@ angular.module('currencyConverter')
 					scope.converterDirective.loaded = true;
 				},
 				function onError(resp) {
-					toast.error("Could not retrieve data!");
+					console.log(resp);
 				}
 			);
 		}

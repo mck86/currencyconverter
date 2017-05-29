@@ -28,13 +28,12 @@ bower install
 grunt serve
 ```
 
-
 ## <a name="note"></a> Note
 
-There may be some errors in IE when running locally, but they disappeared once in production.
+There may be errors in IE when running locally, which are due to an HTTP 403 from the api and I am unable to determine why, but they disappear when running on a server, and works fine in Chrome and Firefox.
 
 ## <a name="to-dos"></a> To-Dos
 
 - Fix IE error when running locally
-- Re-write in SCSS once learned
-- Re-write in ReactJS once learned
+- Re-write CSS with SCSS once learned
+- Re-write JS with ReactJS once learned
