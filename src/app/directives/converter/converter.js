@@ -14,6 +14,7 @@ angular.module('currencyConverter')
 				convertedAmount: null,
 				convertedCurrency: "USD",
 				loaded: false,
+				disclaimer: false,
 				currencies: {},
 				calculateBase: function() {
 					if(isNaN(Number(this.convertedAmount))) {

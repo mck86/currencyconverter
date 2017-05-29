@@ -32,3 +32,9 @@ grunt serve
 ## <a name="note"></a> Note
 
 There may be some errors in IE when running locally, but they disappeared once in production.
+
+## <a name="to-dos"></a> To-Dos
+
+- Fix IE error when running locally
+- Re-write in SCSS once learned
+- Re-write in ReactJS once learned
