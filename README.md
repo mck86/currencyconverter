@@ -31,4 +31,4 @@ grunt serve
 
 ## <a name="note"></a> Note
 
-There may be some errors in IE when running locally, but they disappeared once ran in production.
+There may be some errors in IE when running locally, but they disappeared once in production.
