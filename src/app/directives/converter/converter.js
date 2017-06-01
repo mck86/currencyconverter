@@ -1,6 +1,6 @@
 angular.module('currencyConverter')
 
-.directive('converterDirective', function($q, $filter, fixer) {
+.directive('converterDirective', function($q, $filter, fixer, $http, $sce) {
 	return {
 		restrict: 'E',
 		templateUrl: 'app/directives/converter/converter.html',
