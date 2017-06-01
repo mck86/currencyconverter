@@ -41,6 +41,6 @@ Fixed
 
 ## <a name="to-dos"></a> To-Dos
 
-- Fix IE error when running locally
+~~- Fix IE error when running locally~~
 - Re-write CSS with SCSS once learned
 - Re-write JS with ReactJS once learned
