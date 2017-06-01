@@ -1,12 +1,14 @@
 angular.module('currencyConverter')
 
-.service('fixer', ['$http', Fixer]);
+.service('fixer', ['$http', '$sce', Fixer, ]);
 
-function Fixer($http) {
-	var self = this;
+function Fixer($http, $sce) {
+    var self = this;
 
-	self.getBaseCurrency = function(base) {
-		var url = '//api.fixer.io/latest?base=' + base + '&symbols=USD,CAD,EUR';
-		return $http.get(url);
-	};
+    self.getBaseCurrency = function(base) {
+        var url = "http://api.fixer.io/latest?base=" + base + "&symbols=USD,CAD,EUR";
+        var trustedUrl = $sce.trustAsResourceUrl(url);
+
+        return $http.jsonp(trustedUrl, { jsonpCallbackParam: 'callback' });
+    };
 }
